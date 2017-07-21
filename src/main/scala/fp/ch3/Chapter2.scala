@@ -1,3 +1,5 @@
+package fp.ch3
+
 // Chapter 2: Getting Started with Functional Programming
 object Chapter2 {
 

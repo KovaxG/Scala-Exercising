@@ -1,3 +1,4 @@
+import fp.ch3.Chapter2
 import org.scalatest.{FreeSpec, Matchers}
 
 // Chapter 2: Getting Started with Functional Programming
