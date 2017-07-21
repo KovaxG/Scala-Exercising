@@ -1,4 +1,5 @@
-object Basics {
+// Chapter 2: Getting Started with Functional Programming
+object Chapter2 {
 
   // Exercise 2.1 Fibonacci
   def fib(n: Int): Int = {
