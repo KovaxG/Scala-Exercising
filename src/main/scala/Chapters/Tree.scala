@@ -1,4 +1,4 @@
-package fp.ch3
+package Chapters
 
 sealed trait Tree[+A]
 case class Leaf[A](value: A) extends Tree[A]

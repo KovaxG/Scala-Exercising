@@ -1,6 +1,6 @@
-package fp.ch3
+package Chapters
 
-import scala.runtime.Nothing$
+import DTList._
 
 // Chapter 3: Functional Data Structures
 object Chapter3 {
@@ -17,7 +17,7 @@ object Chapter3 {
   // Exercise 3.2: Tail
   def tail[A](as: List[A]): List[A] = as match {
     case Nil => Nil
-    case Cons(x, xs) => xs
+    case Cons(_, xs) => xs
   }
 
   // Exercise 3.3: setHead

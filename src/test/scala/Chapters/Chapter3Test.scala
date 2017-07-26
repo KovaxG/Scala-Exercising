@@ -1,5 +1,7 @@
+package Chapters
+
+import DTList._
 import org.scalatest.{FreeSpec, Matchers}
-import fp.ch3._
 
 class Chapter3Test extends FreeSpec with Matchers {
   // Exercise 3.1 Pattern Matching
@@ -99,7 +101,7 @@ class Chapter3Test extends FreeSpec with Matchers {
     List.foldLeft(List(1, 2, 3, 4), 1)(_*_) shouldBe 24
   }
 
-  // Exervise 3.12: Reverse
+  // Exervise 3.12: Revers
   "reverse some numbers" in {
     Chapter3.reverse(List(1, 2, 3, 4, 5)) shouldBe List(5, 4, 3, 2, 1)
   }
@@ -224,9 +226,10 @@ class Chapter3Test extends FreeSpec with Matchers {
     Chapter3.hasSequence(List(1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 1,12, 2, 1, 2, 1, 2,1), List())
   }
 
+
   // Exercise 3.25: tree size
   "size 1" in {
-    Tree.size(Branch(Branch(Leaf(1), Leaf(2)), Leaf(3))) shouldBe 5
+    Chapters.Tree.size(Branch(Branch(Leaf(1), Leaf(2)), Leaf(3))) shouldBe 5
   }
 
   // Exercise 3.26: biggest element
