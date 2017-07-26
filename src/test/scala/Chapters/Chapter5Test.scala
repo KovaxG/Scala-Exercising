@@ -62,5 +62,53 @@ class Chapter5Test extends FreeSpec with  Matchers{
   "lazy filter" in {
     Stream(1, 2, 3, 4, 5).filter((a: Int) => a < 3).toList shouldBe Stream(1, 2).toList
   }
+
+  // Ones
+  "take 3 ones" in {
+    Stream.ones.take(3).toList shouldBe Stream(1, 1, 1).toList
+  }
+
+  // Exercise 5.8
+  "take 3 \"Cool\" " in {
+    Stream.constant("Cool").take(3).toList shouldBe Stream("Cool", "Cool", "Cool").toList
+  }
+
+  // Exercise5.9
+  "increaising test" in {
+    Stream.increasing.take(5).toList shouldBe Stream(0, 1, 2, 3, 4).toList
+  }
+
+  "increasing start from 13" in {
+    Stream.from(13).take(3).toList shouldBe Stream(13, 14, 15).toList
+  }
+
+  // Exercise 5.10
+  "fibo" in {
+    Stream.fibs.take(5).toList shouldBe Stream(0, 1, 1, 2, 3).toList
+  }
+
+  // Exercise 5.11
+  "unfold" in {
+    Stream.unfold(0)(i => Some(i, i+1)).take(5).toList shouldBe List(0, 1, 2, 3, 4)
+  }
+  "fibo2" in {
+    Stream.fibs2.take(5).toList shouldBe Stream(0, 1, 1, 2, 3).toList
+  }
+
+  "increaising test2" in {
+    Stream.from2(0).take(5).toList shouldBe Stream(0, 1, 2, 3, 4).toList
+  }
+
+  "increasing start from 132" in {
+    Stream.from2(13).take(3).toList shouldBe Stream(13, 14, 15).toList
+  }
+
+  "constant2" in {
+    Stream.constant2("Wassupp!").take(5).toList shouldBe List("Wassupp!", "Wassupp!", "Wassupp!", "Wassupp!", "Wassupp!")
+  }
+
+  "ones2" in {
+    Stream.ones2.take(100).toList shouldBe Stream.ones.take(100).toList
+  }
 }
 
